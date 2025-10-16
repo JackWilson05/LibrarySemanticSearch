@@ -1,2 +1,4 @@
 # ignore conda env (we will want to upload a environment.yml instead)
 LibSemSearchEnv/
+*.index
+*.pkl
