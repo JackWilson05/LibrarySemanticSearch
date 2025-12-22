@@ -22,7 +22,7 @@ print(books_dataset.head(1)) # print first item
 # create hnsw faiss dataset (default params)
 text_column = books_dataset['Description']
 id_column = None
-model_name = 'all-MiniLM-L6-v2'
+model_name = "all-MiniLM-L6-v2"
 batch_size = 64
 
 # encode text in batches w progress 
