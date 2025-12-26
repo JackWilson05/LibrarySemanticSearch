@@ -1,4 +1,5 @@
 # implementing HNSW with FAISS. Evals based on book descriptions for 1000 random books
+# currently uses "all-MiniLM-L6-v2" but would later use a finetuned version
 
 #imports and setup
 import pandas as pd

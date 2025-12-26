@@ -16,3 +16,7 @@
 # 128 -> 64 -> 16 -> 4 -> 1 
 # 3n expansion not 4n; also use FFN
 # keep dont discard but only use encoder
+
+
+# other idea is to get several different versions of descriptions and do triplet training
+# or could also use metadata (same author/genre to more similar?)
