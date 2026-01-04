@@ -1,22 +1,21 @@
-#TODO: try using unsupervised pretraining with encoder decoder
-# take descriptions, break them down into words, get the embeddings of the words, encoder decoder to turn it into one vector
-# after training that then train the overall model to match those embeddings (more expressive) using distillation -> unsupervised/semisupervised pretraining for any domain
-# keep in mind that vectors will change themselves
+# training using triplet loss and Matryoshka embeddings
+# starting model is "all-MiniLM-L6-v2"
 
-# train test split
-# also think abt masking/other common augs (including maybe keeping old embeddings (unchanged model) and new ones (updating model))
-
-# only train embedding model on most up to date encoded stuff but encoder decoder can be trained on both
-
-#NOTE: data formatting ->  start token, normal tokens, end token, null until end of input size
-# [CLS] (start), [SEP] (end), [PAD] (after end)
+#TODO: imports
 
 
-# 128 tokens
-# 128 -> 64 -> 16 -> 4 -> 1 
-# 3n expansion not 4n; also use FFN
-# keep dont discard but only use encoder
+#TODO: collect book_ids that are non null in goodreads books + at least 14 reviews
 
 
-# other idea is to get several different versions of descriptions and do triplet training
-# or could also use metadata (same author/genre to more similar?)
+
+#TODO: create dataloader (grabs up to 64 positives and 64+ negatives)
+
+
+#TODO: train with ohem (worst negatives and positives, batch size 128 -> useful samples (harder than a threshold)
+
+
+    # after each round, lets validate with a val set 
+        # make sure that same groups have higher similarity than random
+
+
+#TODO: final testing set is the same
