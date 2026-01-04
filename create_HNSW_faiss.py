@@ -14,7 +14,7 @@ import pickle
 # read in books dataset (only title, authors, and description)
 # note that we only care about ones with descriptions
 cols_needed = ['Title','Authors','Description']
-books_dataset = pd.read_csv('BooksDatasetClean.csv', usecols=cols_needed)
+books_dataset = pd.read_csv('./Datasets/BooksDatasetClean.csv', usecols=cols_needed)
 
 books_dataset = books_dataset[books_dataset['Description'].notna()] # filter by not null descriptions
 
